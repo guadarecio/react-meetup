@@ -6,6 +6,9 @@
     justify-content: space-between;
     background-color: #77002e;
     padding: 0 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
   
   .logo {
@@ -45,3 +48,15 @@
     padding: 0 1rem;
     margin-left: 0.5rem;
   }
+
+ .visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+ .hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+ }

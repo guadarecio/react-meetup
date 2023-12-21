@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import {
   ALL_MEETUP_PAGE,
   FAVORITES_PAGE,
@@ -7,8 +8,29 @@ import {
 import classes from "./MainNavigation.module.css";
 
 export default function MainNavigation({ setPage }) {
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 50);
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos, visible]);
+
   return (
-    <header className={classes.header} data-test="navigation-header">
+    <header
+      className={`${classes.header} ${
+        visible ? classes.visible : classes.hidden
+      }`}
+      data-test="navigation-header"
+    >
       <div className={classes.logo}>React Meetups</div>
       <nav>
         <ul>
