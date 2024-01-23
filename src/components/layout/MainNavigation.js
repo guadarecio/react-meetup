@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { DataContext } from "../../context/DataContext";
 import {
   ALL_MEETUP_PAGE,
   FAVORITES_PAGE,
@@ -10,7 +11,7 @@ import classes from "./MainNavigation.module.css";
 export default function MainNavigation({ setPage }) {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
-
+  const { favorites } = useContext(DataContext);
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
     setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 50);
@@ -48,7 +49,7 @@ export default function MainNavigation({ setPage }) {
           <li>
             <a href="/#my-favorites" onClick={() => setPage(FAVORITES_PAGE)}>
               My Favorites
-              <span className={classes.badge}>{0}</span>
+              <span className={classes.badge}>{favorites.length}</span>
             </a>
           </li>
         </ul>

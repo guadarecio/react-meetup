@@ -1,16 +1,18 @@
+import { useContext } from "react";
 import MeetupItem from "../components/meetups/MeetupItem";
 import classes from "./../components/meetups/MeetupList.module.css";
-
+import { DataContext } from "../context/DataContext";
 
 export default function AllMeetupsPage() {
+  const { data } = useContext(DataContext);
+
   return (
     <section>
       <h1>All Meetups</h1>
       <ul className={classes.list}>
-        <MeetupItem />
-        <MeetupItem />
-        <MeetupItem />
-        <MeetupItem />
+        {data?.map((d) => (
+          <MeetupItem data={d} />
+        ))}
       </ul>
     </section>
   );
