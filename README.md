@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Meetup App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Este proyecto de React es una aplicación de Meetup que permite visualizar, agregar y gestionar meetups. Está diseñado para proporcionar una interfaz amigable y funcional para los usuarios.
 
-In the project directory, you can run:
+## Instalación
+
+Clona este repositorio:
+
+### `https://github.com/guadarecio/react-meetup.git`
+
+Navega al directorio del proyecto:
+
+### `cd meetup-app`
+
+Instala las dependencias:
+
+### `npm install`
+
+## Ejecución
+
+Para ejecutar la aplicación, utiliza el siguiente comando:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La aplicación estará disponible en http://localhost:3000.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Testing
 
-### `npm run build`
+### Test End-to-End (E2E) con Cypress
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Asegúrate de tener la aplicación en ejecución antes de ejecutar los tests de Cypress.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Abre una nueva terminal y ejecuta la aplicación:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npx cypress open`
 
-### `npm run eject`
+Estos tests aseguran que las funcionalidades principales de la aplicación funcionen correctamente.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+El test se verá con el nombre de  `cypress/e2e/main_navigation`.
+  
+### Características
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Pantalla de Meetups: Muestra todos los meetups existentes.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Formulario de Nuevo Meetup: Permite agregar nuevos meetups mediante un formulario intuitivo.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Pantalla de Favoritos: Muestra todos los meetups seleccionados como favoritos.
 
-## Learn More
+### Requisitos y Condiciones
+- Se ha implementado una animación en el header para facilitar el acceso rápido a las distintas páginas al hacer scroll.
+- La navegación desde el header se refleja en la URL para mejorar el SEO.
+- El botón de añadir a favoritos ahora funciona correctamente. Se ha implementado la lógica para añadir y quitar de favoritos.
+- Se ha implementado un test E2E, para garantizar la calidad del código y que todas las implementaciones funcionen correctamente.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
