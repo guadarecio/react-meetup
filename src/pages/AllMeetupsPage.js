@@ -11,7 +11,7 @@ export default function AllMeetupsPage() {
       <h1>All Meetups</h1>
       <ul className={classes.list}>
         {data?.map((d) => (
-          <MeetupItem data={d} />
+          <MeetupItem key={d.id} data={d} />
         ))}
       </ul>
     </section>

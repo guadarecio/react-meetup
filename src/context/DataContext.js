@@ -4,7 +4,7 @@ import { useFetch } from "../util-hooks/useFetch";
 export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
-  const { data } = useFetch({
+  const { data, setData } = useFetch({
     url: "/data.json",
   });
 
@@ -20,7 +20,9 @@ export const DataProvider = ({ children }) => {
   };
 
   const removeFromFavorites = (id) => {
-    setFavorites((prevFavorites) => prevFavorites.filter((item) => item.id !== id));
+    setFavorites((prevFavorites) =>
+      prevFavorites.filter((item) => item.id !== id)
+    );
   };
 
   const toggleFavorite = (item) => {
@@ -31,9 +33,20 @@ export const DataProvider = ({ children }) => {
     }
   };
 
+  const addNewMeetup = (newMeetup) => {
+    setData((preState) => [...preState, newMeetup]);
+  };
+
   return (
     <DataContext.Provider
-      value={{ data, filterData, favorites, addToFavorites, toggleFavorite }}
+      value={{
+        data,
+        filterData,
+        favorites,
+        addToFavorites,
+        toggleFavorite,
+        addNewMeetup,
+      }}
     >
       {children}
     </DataContext.Provider>
