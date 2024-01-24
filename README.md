@@ -30,14 +30,39 @@ La aplicación estará disponible en http://localhost:3000.
 
 Asegúrate de tener la aplicación en ejecución antes de ejecutar los tests de Cypress.
 
-Abre una nueva terminal y ejecuta la aplicación:
+1. Abre una nueva terminal y ejecuta la aplicación:
 
 ### `npx cypress open`
 
+2. A continuación le aparecerá una frase que diga:
+
+_Necesita instalar los siguientes paquetes:_
+_ciprés@13.6.3_
+_¿Está bien continuar? (y)_
+
+Debe escribir:
+
+### `y`
+
+3. Te aparecerá la siguiente ventana, con las novedades de cypress, en la que deberás hacer click en Continuar:
+
+![Cypress Intro](/public/cypress1.png)
+
+4. La siguiente ventana que verás será la de bienvenida y deberás hacer click en "E2E Testing"
+
+![Cypress Welcome](/public/cypress2.png)
+
+5. En la Configuración harás click en "Continuar":
+   ![Cypress Configuration](/public/cypress3.png)
+
+6. En la ventana del navegador harás click en "Start E2E Testing in Chrome": 
+![Cypress Browser](/public/cypress4.png)
+
+
+7. Finalmente el test se verá con el nombre de `cypress/e2e/main_navigation`.
+
+
 Estos tests aseguran que las funcionalidades principales de la aplicación funcionen correctamente.
-
-El test se verá con el nombre de `cypress/e2e/main_navigation`.
-
 ### Características
 
 1. Pantalla de Meetups: Muestra todos los meetups existentes.
