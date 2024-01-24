@@ -9,11 +9,15 @@ export default function FavoritesPage() {
   return (
     <section>
       <h1>Favorites Page</h1>
-      <ul className={classes.list}>
-        {favorites?.map((d) => (
-          <MeetupItem data={d} />
-        ))}
-      </ul>
+      {favorites.length > 0 ? (
+        <ul className={classes.list}>
+          {favorites.map((d) => (
+            <MeetupItem key={d.id} data={d} />
+          ))}
+        </ul>
+      ) : (
+        <h3>No tienes meetups favoritos. ¡Agrega algunos!</h3>
+      )}
     </section>
   );
 }
