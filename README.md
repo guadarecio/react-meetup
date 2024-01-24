@@ -30,11 +30,7 @@ La aplicación estará disponible en http://localhost:3000.
 
 Asegúrate de tener la aplicación en ejecución antes de ejecutar los tests de Cypress.
 
-1. Abre una nueva terminal e instala Cypress:
-
-### `npm install cypress -D`
-
-2. Luego ejecuta la aplicación:
+Abre una nueva terminal y ejecuta la aplicación:
 
 ### `npx cypress open`
 
