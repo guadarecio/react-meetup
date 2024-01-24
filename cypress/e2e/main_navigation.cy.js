@@ -6,6 +6,8 @@ context("React Meetups", () => {
   });
 
   it("Click in All Meetups", () => {
+    cy.scrollTo("bottom", { duration: 2000 });
+    cy.scrollTo("top", { duration: 1000 });
     cy.get(":nth-child(1) > a").click();
     cy.wait(1500);
     cy.get(
@@ -15,6 +17,7 @@ context("React Meetups", () => {
     cy.get(
       ":nth-child(1) > .Card_card__48SLx > .MeetupItem_actions__mhVrb > button"
     ).click();
+    cy.wait(1500);
   });
 
   it("Click in All Meetups and complete de form", () => {
