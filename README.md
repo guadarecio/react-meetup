@@ -34,21 +34,21 @@ Asegúrate de tener la aplicación en ejecución antes de ejecutar los tests de 
 
 ### `npx cypress open`
 
-2. A continuación le aparecerá una frase que diga:
+2. A continuación te aparecerá una frase que diga:
 
 _Necesita instalar los siguientes paquetes:_
 _ciprés@13.6.3_
 _¿Está bien continuar? (y)_
 
-Debe escribir:
+Debe escribir que sí de la siguiente manera:
 
 ### `y`
 
-3. Te aparecerá la siguiente ventana, con las novedades de cypress, en la que deberás hacer click en Continuar:
+3. En la siguiente ventana, verás las novedades de cypress, en las que deberás hacer click en "Continuar":
 
 ![Cypress Intro](/public/cypress1.png)
 
-4. La siguiente ventana que verás será la de bienvenida y deberás hacer click en "E2E Testing"
+4. Luego aparecerá la ventana de bienvenida y deberás hacer click en "E2E Testing"
 
 ![Cypress Welcome](/public/cypress2.png)
 
@@ -62,7 +62,7 @@ Debe escribir:
 7. Finalmente el test se verá con el nombre de `cypress/e2e/main_navigation`.
 
 
-Estos tests aseguran que las funcionalidades principales de la aplicación funcionen correctamente.
+
 ### Características
 
 1. Pantalla de Meetups: Muestra todos los meetups existentes.
@@ -77,3 +77,4 @@ Estos tests aseguran que las funcionalidades principales de la aplicación funci
 - La navegación desde el header se refleja en la URL para mejorar el SEO.
 - El botón de añadir a favoritos ahora funciona correctamente. Se ha implementado la lógica para añadir y quitar de favoritos.
 - Se ha implementado un test E2E, para garantizar la calidad del código y que todas las implementaciones funcionen correctamente.
+- El botón de añadir un meetup ahora funciona correctamente. Se ha implementado la lógica para que se agregue un nuevo meetup a la lista cuando se hace click.
