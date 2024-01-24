@@ -49,7 +49,9 @@ export default function MainNavigation({ setPage }) {
           <li>
             <a href="/#my-favorites" onClick={() => setPage(FAVORITES_PAGE)}>
               My Favorites
-              <span className={classes.badge}>{favorites.length}</span>
+              <span className={classes.badge}>
+                {favorites.length.toString()}
+              </span>
             </a>
           </li>
         </ul>
